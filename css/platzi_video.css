@@ -1,0 +1,241 @@
+body {
+  margin: 0px;
+  font-family: "Muli", sans-serif;
+  background-color: #8f57fd;
+}
+
+.header {
+  background-color: #8f57fd;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__img {
+  width: 200px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.header__menu {
+  margin-right: 30px;
+}
+
+.header__menu ul {
+  display: none;
+  list-style: none;
+  padding: 0px;
+  position: absolute;
+  width: 100px;
+  text-align: right;
+  margin: 0px 0px 0px -14px;
+}
+
+.header__menu:hover ul,
+ul:hover {
+  display: block;
+}
+
+.header__menu li {
+  margin: 10px 0px;
+}
+
+.header__menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.header__menu li a:hover {
+  text-decoration: underline;
+}
+
+.header__menu--profile {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.header__menu--profile img {
+  margin-right: 8px;
+  width: 40px;
+  height: 40px;
+}
+
+.header__menu--profile p {
+  margin: 0px;
+}
+
+.main {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__title {
+  color: white;
+  font-size: 25px;
+}
+
+.input {
+  font-family: "Muli", sans-serif;
+  font-size: 16px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0px 20px;
+  height: 50px;
+  width: 70%;
+}
+
+::placeholder {
+  color: white;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.categories__title {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  padding-left: 30px;
+  width: 100%;
+}
+
+.carousel {
+  width: 100%;
+  overflow-y: scroll;
+  padding: 30px;
+  position: relative;
+}
+
+.carousel__container {
+  white-space: nowrap;
+  margin: 70px 0px;
+  padding-bottom: 10px;
+}
+
+.carousel-item {
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  background-color: bisque;
+  overflow: hidden;
+  margin-right: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+  position: relative;
+}
+
+.carousel-item:hover ~ .carousel-item {
+  transform: translate3d(100px, 0, 0);
+}
+
+.carousel__container:hover .carousel-item {
+  opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.carousel__container:hover .carousel-item:hover .carousel-item__details {
+  opacity: 1;
+}
+
+.carousel-item__img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.carousel-item__details {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  font-size: 10px;
+  opacity: 0;
+  transition: 450ms opacity;
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: white;
+}
+
+.carousel-item__details--icon {
+  width: 20px;
+  height: 20px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: #8f57fd;
+}
+
+.footer a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  padding-left: 30px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/**************************************************/
+/************* NOT FOUND PAGE *********************/
+/**************************************************/
+.mensaje {
+  background: linear-gradient(#21c08b, #ab88ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 0px;
+  min-height: calc(100vh - 200px);
+}
+
+.mensaje__container {
+  color: white;
+  padding: 60px 68px 40px;
+  min-height: 100px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mensaje__container p {
+  margin: 0px;
+}
+
+.mensaje__container--nroerror {
+  font-size: 50px;
+  animation-duration: 1s;
+  animation-name: palpito;
+  animation-iteration-count: infinite;
+  transition: 450ms;
+}
+
+@keyframes palpito {
+  from {
+    font-size: 50px;
+  }
+  to {
+    font-size: 80px;
+  }
+}
+
+/*# sourceMappingURL=platzi_video.css.map */
